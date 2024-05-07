@@ -49,7 +49,7 @@ InputNames = {
     NumLock = "NumL", 
     Comma = ",", 
     Period = ".", 
-    Escape = "1.0"
+    Escape = "None"
     
 }
 
@@ -412,7 +412,7 @@ local items = {}
     TextLabel_2.Position = UDim2.new(0.25, 0, -0.125, 0)
     TextLabel_2.Size = UDim2.new(0, 120, 0, 41)
     TextLabel_2.Font = Enum.Font.Highway
-    TextLabel_2.Text = "  Trashzin.wtf"
+    TextLabel_2.Text = "  Rift.CC"
     TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
     TextLabel_2.TextSize = 17.000
     TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
@@ -447,7 +447,7 @@ local items = {}
     TextLabel_3.Position = UDim2.new(0.25, 0, -0.125, 0)
     TextLabel_3.Size = UDim2.new(0, 120, 0, 41)
     TextLabel_3.Font = Enum.Font.Highway
-    TextLabel_3.Text = "  \"1.0\""
+    TextLabel_3.Text = "  \"None\""
     TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
     TextLabel_3.TextSize = 17.000
     TextLabel_3.TextXAlignment = Enum.TextXAlignment.Left
@@ -818,7 +818,7 @@ local items = {}
         Status.Size = UDim2.new(0, 120, 0, 41)
         Status.ZIndex = 3
         Status.Font = Enum.Font.Highway
-        Status.Text = "  Trashzin.wtf"
+        Status.Text = "  Rift.cc"
         Status.TextColor3 = Color3.fromRGB(126, 106, 226)
         Status.TextSize = 19.000
         Status.TextWrapped = true
@@ -2834,4 +2834,82 @@ end)
     return items
 
 end
+
+
+
+
+
+Window = Library:init("ECLIPSE PRIVATE MENU ")
+
+
+local Vis = Window:AddTab("Visuals","http://www.roblox.com/asset/?id=17397674582",true)
+local Aimbot = Window:AddTab("Aimbot","http://www.roblox.com/asset/?id=17397590638")
+
+local test = Aimbot:AddSection("test lool",Right)
+
+for i,v in pairs(test) do print(i,v) end
+
+local PlayerVisuals = Vis:AddSection("Players",Left)
+
+local toggle22 = PlayerVisuals:AddToggle("Watermark", false, function(state)
+    
+     Window:UpdateWaterMark(state)
+    
+end)
+
+local dropdown = PlayerVisuals:AddDropdown("Dropdown",{"hello","i have autism","xd"}, "i have autism", function(val)
+
+  
+end)
+
+local toggle = PlayerVisuals:AddToggle("Toggle", false, function(state)
+   
+end)
+
+toggle:AddSettings("E","Toggle","New Keybind", function(value)
+   
+end)
+
+toggle22:AddColorPicker(Color3.fromRGB(255,255,255), function(value)
+
+end)
+
+local button = PlayerVisuals:AddButton("Success", function()
+  
+    Window:Notify("Your changes have been saved sucesfully!","Success",5)
+
+end)
+
+local button2 = PlayerVisuals:AddButton("Warning", function()
+  
+    Window:Notify("This action can not be undone!","Warning",5)
+
+end)
+
+local test = Vis:AddSection("test","Right")
+
+
+local toggle2 = test:AddToggle("Toggle", false, function(state)
+  
+end)
+
+toggle2:AddColorPicker(Color3.fromRGB(255,255,255), function(value)
+
+end)
+
+toggle2:AddSettings("C","Hold","FOV Change", function(value)
+
+end)
+
+
+
+local slider = test:AddSlider("Slider Test",200,15,"px", function(state)
+ 
+end)
+
+local dropdown = PlayerVisuals:AddMultiDropdown("MultiDropdown",{"hello","lmao","xd"}, {"lmao","xd"}, function(val)
+
+end)
+
+
 
